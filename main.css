@@ -147,15 +147,9 @@ p {
   stroke: white;
 }
 
-.pic-select {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
-
 .project-img1 {
-  width: 432px;
-  height: 491px;
+  display: flex;
+  grid-row: span 2;
   overflow: hidden;
   border-radius: 16px;
 }
@@ -165,90 +159,33 @@ p {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover; /* Maintain the aspect ratio and fill the container */
-  -o-object-position: center center;
-     object-position: center center; /* Adjust the image position */
-  transition: object-position 0.3s ease-in-out;
-  transition: object-position 0.3s ease-in-out, -o-object-position 0.3s ease-in-out;
+  background-color: #020E2C;
+  transition: transform 0.3s ease;
 }
-
+    
 .project-img1 img:hover {
-  transition-delay: 0.2s;
-  width: 100%; /* Make the image fill the container */
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; /* Maintain the aspect ratio and fill the container */
-  -o-object-position: -210px center;
-     object-position: -210px center; /* Adjust the image position */
+  .overlay {
+    background-color: #020E2C;
+  }
+  transform: scale(1.2);
+}  
+
+.project-img1.cobalt {
+  order: -1;
 }
 
-.project-img2 {
-  width: 336px;
-  height: 491px;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.project-img2 img {
-  width: 100%; /* Make the image fill the container */
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; /* Maintain the aspect ratio and fill the container */
-  -o-object-position: center center;
-     object-position: center center; /* Adjust the image position */
-  transition: object-position 0.3s ease-in-out;
-  transition: object-position 0.3s ease-in-out, -o-object-position 0.3s ease-in-out;
-}
-
-.project-img2 img:hover {
-  transition-delay: 0.2s;
-  width: 100%; /* Make the image fill the container */
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; /* Maintain the aspect ratio and fill the container */
-  -o-object-position: -210px center;
-     object-position: -210px center; /* Adjust the image position */
-}
-
-.project-img3 {
-  width: 432px;
-  height: 491px;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.project-img3 img {
-  width: 100%; /* Make the image fill the container */
-  height: 100%;
-  border-radius: 16px;
-  -o-object-fit: cover;
-     object-fit: cover; /* Maintain the aspect ratio and fill the container */
-  -o-object-position: -45px center;
-     object-position: -45px center; /* Adjust the image position */
-  transition: object-position 0.3s ease-in-out;
-  transition: object-position 0.3s ease-in-out, -o-object-position 0.3s ease-in-out;
-}
-
-.project-img3 img:hover {
-  transition-delay: 0.2s;
-  width: 100%; /* Make the image fill the container */
-  height: 100%;
-  border-radius: 16px;
-  -o-object-fit: cover;
-     object-fit: cover; /* Maintain the aspect ratio and fill the container */
-  -o-object-position: -100px center;
-     object-position: -100px center; /* Adjust the image position */
-}
 
 .project {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
   margin-bottom: 192px;
 }
 
 .detail {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: 30px;
 }
 
@@ -347,7 +284,7 @@ p {
 
 .contact-grid {
   display: grid;
-  grid-template: auto auto auto/1fr 1fr;
+  grid-template: auto auto auto/1fr auto;
   row-gap: 48px;
   -moz-column-gap: 16px;
        column-gap: 16px;
