@@ -5,8 +5,7 @@
   color: #020E2C;
 }
 
-.container {
-  width: 1136px;
+.container {width: 1136px;
 }
 
 .header-section {
@@ -71,6 +70,9 @@ h1 {
 p {
   font-size: 20px;
   color: #020E2C;
+}
+#hero-content p {
+  color: #020e2c;
 }
 
 #bold {
@@ -140,9 +142,11 @@ p {
   transition-delay: 0.2s;
   background-color: #041F60;
 }
+
 .project-click:hover .project-click-text {
   color: white;
 }
+
 .project-click:hover .arrow-icon path {
   stroke: white;
 }
@@ -158,22 +162,21 @@ p {
   width: 100%; /* Make the image fill the container */
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* Maintain the aspect ratio and fill the container */
+  object-fit: cover; /* Maintain the aspect ratio and fill the container */
   background-color: #020E2C;
   transition: transform 0.3s ease;
 }
-    
+
 .project-img1 img:hover {
-  .overlay {
-    background-color: #020E2C;
-  }
   transform: scale(1.2);
-}  
+}
+.project-img1 img:hover .overlay {
+  background-color: #020E2C;
+}
 
 .project-img1.cobalt {
   order: -1;
 }
-
 
 .project {
   display: grid;
@@ -249,6 +252,7 @@ p {
   cursor: pointer;
   text-decoration: none;
 }
+
 .button-main svg {
   display: inline;
 }
@@ -270,70 +274,62 @@ p {
   color: white;
   height: 94px;
 }
+
 .button-main:hover svg {
   display: inline-block;
 }
+
 .button-main:hover .arrow-icon-button path {
   stroke: white;
 }
 
 .button-link {
   text-decoration: none;
-  height: fit-content;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template: auto auto auto/1fr auto;
-  row-gap: 48px;
-  -moz-column-gap: 16px;
-       column-gap: 16px;
-  margin-bottom: 128px;
-}
-
-.contact-form {
-  grid-row: span 3;
-  background-color: transparent;
-  border-radius: 16px;
-}
-
-.contact-header h2 {
-  margin-bottom: 64px;
-}
-
-.email div p {
-  font-size: 16px;
-  color: rgba(2, 14, 44, 0.5019607843);
-}
-
-.email div {
-  display: flex;
-  flex-direction: column;
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.social-icons-contact p {
-  font-size: 16px;
-  color: rgba(2, 14, 44, 0.5019607843);
-}
-
-.social-icons-contact .social-icons {
-  justify-content: flex-start;
-  margin-top: 16px;
-}
-
-.email {
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.button.resume {
-  display: block;
+/* Contact section */
+#contact {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 128px;
 }
-
-.container.resume-button {
+.container.contact {      /* Set spacing between the contact section elements*/
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.contact-header .section-header {   /* Set spacing between the contact header and text*/
+  margin-bottom: 64px;
+}
+.email {    /* Set spacing between the email and email link*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.email p {    /* Font settings for "Email me at:" */
+  font-size: 16px;
+  color: #020E2C80;
+  margin: 0;
+}
+.social-icons-contact {    /* Set spacing between the social icons and its header */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.social-icons-contact p {   /* Font settings for "Follow me at:" */
+  font-size: 16px;
+  color: #020E2C80;
+  margin: 0;
+}
+.social-icons-contact .social-icons {
+  margin: 0;
+}
+.resume-button {
   display: flex;
   justify-content: center;
   margin-bottom: 64px;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

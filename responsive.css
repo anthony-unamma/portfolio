@@ -1,7 +1,67 @@
-@media (max-width: 1140px) {
+@media (max-width: 1200px) {
     .container {
         width: 960px;
         margin-left: 16px;
         margin-right: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    #hero-content {
+        width: 80%;
+    }
+    .container {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    .project {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 24px;
+        margin-bottom: 192px;
+      }
+      #hero-content {
+        width: 100%;
+    }
+    .project-click {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        padding: 16px;
+    }
+    .project-click-text {
+        font-size: 28px;
+    }
+    .section-header {
+        font-size: 40px;
+    }
+    .project-img1 {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-click {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        padding: 16px;
+    }
+    .project-click-text {
+        font-size: 28px;
+    }
+    .detail-box {
+        width: 100%;
+    }
+    #hero-content h1 {
+        font-size: 48px;
     }
 }
