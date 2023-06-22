@@ -5,7 +5,9 @@
   color: #020E2C;
 }
 
-.container {width: 1136px;
+.container {
+  width: 1136px;
+
 }
 
 .header-section {
@@ -17,6 +19,7 @@
   position: fixed;
   top: 0px;
   width: 100%;
+  z-index: 1000;
 }
 
 .inner-header {
@@ -169,9 +172,6 @@ p {
 
 .project-img1 img:hover {
   transform: scale(1.2);
-}
-.project-img1 img:hover .overlay {
-  background-color: #020E2C;
 }
 
 .project-img1.cobalt {
